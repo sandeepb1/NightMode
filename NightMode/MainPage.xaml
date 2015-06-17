@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="NightMode.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NightMode"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" x:Name="Page">
+
+    <Grid Background="{Binding Theme.BackgroundColour, ElementName=Page}">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <!-- Header -->
+        <Grid Grid.Row="0" Background="{Binding Theme.HeaderColour, ElementName=Page}">
+            <Button Margin="20" x:Name="BtnChangeTheme" Content="Change Theme" Click="BtnChangeTheme_Click"  />
+        </Grid>
+        <!-- / Header -->
+
+        <!-- Body -->
+        <Grid Grid.Row="1">
+            <TextBlock FontSize="18" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at neque eu nisl semper commodo. In venenatis id velit et malesuada. Quisque finibus condimentum turpis, at tincidunt sem imperdiet et. Nullam sodales augue ante, at cursus mi aliquet vitae. Integer sed turpis ac nisi placerat pharetra. Maecenas fringilla imperdiet leo, at cursus lectus mollis ut. Pellentesque ultricies sapien non convallis tincidunt. Nunc consectetur dui finibus nunc mollis porttitor vel auctor massa. Mauris elementum pharetra fringilla. In pellentesque et diam sed mattis. In at vulputate massa. Vivamus justo felis, faucibus rutrum interdum quis, eleifend euismod risus. Fusce lorem elit, finibus quis lacus sit amet, fermentum tempus nunc. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum pharetra rutrum tristique." TextWrapping="Wrap" Margin="20" Foreground="{Binding Theme.ForegroundColour, ElementName=Page}" />
+        </Grid>
+        <!-- / Body -->
+
+    </Grid>
+</Page>
